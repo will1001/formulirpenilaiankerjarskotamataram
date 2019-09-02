@@ -59,7 +59,7 @@ import { environment } from '../environments/environment';
     MatCheckboxModule,
     MatRadioModule,
     MatDividerModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule,
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireAuthModule,
