@@ -20,11 +20,13 @@
     <th mat-header-cell *matHeaderCellDef> Action </th>
     <td mat-cell *matCellDef="let element"> 
     	<button mat-raised-button (click)="Edit()" color="primary" class="ButtonAction">Edit</button> 
-    	<button mat-raised-button (click)="Delete()" color="primary" class="ButtonAction">Delete</button> 
+    	<button mat-raised-button (click)="Delete(element.id)" color="primary" class="ButtonAction">Delete</button> 
     	<button mat-raised-button (click)="Preview()" color="primary" class="ButtonAction">Preview</button> 
     	<button mat-raised-button (click)="Export()" color="primary" class="ButtonAction">Export</button> 
     </td>
   </ng-container>
+
+  
 
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

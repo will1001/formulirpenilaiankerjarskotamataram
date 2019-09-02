@@ -18,3 +18,11 @@
 	line-height: 23px;
 	letter-spacing: 3px;
 }
+
+.ButtonAction{
+  width: 100px;
+}
+
+.example-button-row{
+  text-align: center;
+}

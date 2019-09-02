@@ -3,7 +3,8 @@ import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog
 import { FormEditComponent } from '../form-edit/form-edit.component';
 import { FormAddComponent } from '../form-add/form-add.component';
 import { DeletePopUpComponent } from '../delete-pop-up/delete-pop-up.component';
-
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 export interface PeriodicElement {
   nama: string;
@@ -13,10 +14,7 @@ export interface PeriodicElement {
 }
 
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {nama: 'andi', nip: 12029376493, jabatan: 'perawat',ket : ''},
-  {nama: 'Budi', nip: 12345678999, jabatan: 'Dokter',ket : ''},
-];
+const ELEMENT_DATA: PeriodicElement[] = [];
 
 @Component({
   selector: 'app-body-table',
@@ -26,9 +24,25 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class BodyTableComponent implements OnInit {
 
   displayedColumns: string[] = ['nama', 'nip', 'jabatan','ket'];
+  items: Observable<any[]>;
+  students: any;
   dataSource = ELEMENT_DATA;
-
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog,db: AngularFirestore) {
+    this.items = db.collection('FormulirPenilaianKerja').snapshotChanges();
+    this.items.subscribe(res => {
+      this.students = res.map(e => {
+        return {
+          id: e.payload.doc.id,
+          nama: e.payload.doc.data()['nama'],
+          nip: e.payload.doc.data()['nip'],
+          jabatan: e.payload.doc.data()['jabatan'],
+          ket: e.payload.doc.data()['unit_kerja'],
+        };
+      })
+      this.dataSource = this.students;
+    });
+    
+  }
 
   Add(): void {
     this.dialog.open(FormAddComponent);
@@ -38,8 +52,10 @@ export class BodyTableComponent implements OnInit {
     this.dialog.open(FormEditComponent);
   }
 
-  Delete(): void {
-    this.dialog.open(DeletePopUpComponent);
+  Delete(id): void {
+    this.dialog.open(DeletePopUpComponent, {
+      data: {id:id,}
+    });
   }
 
   ngOnInit() {
