@@ -87,6 +87,10 @@ export class BodyTableComponent implements OnInit {
       data: {data:data,}
     });
   }
+  
+  Export(): void {
+   
+  }
 
   ngOnInit() {
   }
