@@ -46,11 +46,21 @@ export class PreviewComponent implements OnInit {
 
   students: any;
   dataSource = ELEMENT_DATA;
+  total:any;
   constructor(
     public dialogRef: MatDialogRef<PreviewComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData,db:AngularFirestore) {
       console.log(data.data);
       this.dataSource=data.data;
+      this.total=0;
+      for( var el in data.data ) {
+        if( data.data[el]<20 ) {
+          this.total += parseInt( data.data[el],10 );
+        }
+      }
+      this.total = this.total/20;
+      console.log(this.total);
+
 
     }
   ngOnInit() {
