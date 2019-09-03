@@ -16,11 +16,11 @@
     </mat-form-field>
   
   
-      <mat-list>
+    <mat-list>
         <h3>I.ASPEK TEKNIS PEKERJAAN</h3>
   
         <p class="textopsi"> 1.Kualitas kerja,kemampuan,efektifitas,ketelitian,keterampilan dan kebersihan dalam menyelesaikan tugas sesuai protap</p>
-        <mat-radio-group aria-label="Select an option" color="primary">
+        <mat-radio-group aria-label="Select an option" color="primary" [(ngModel)]="aspek_teknis_1">
           <mat-radio-button value="1" class="opsi"> 1 </mat-radio-button>
           <mat-radio-button value="2" class="opsi"> 2 </mat-radio-button>
           <mat-radio-button value="3" class="opsi"> 3 </mat-radio-button>
@@ -30,7 +30,7 @@
   
         <mat-divider></mat-divider>
          <p class="textopsi"> 2.Kuantitas kerja,seberapa tepat dan cepat menyelesaikan tugas</p>
-        <mat-radio-group aria-label="Select an option" color="primary">
+        <mat-radio-group aria-label="Select an option" color="primary" [(ngModel)]="aspek_teknis_2">
           <mat-radio-button value="1" class="opsi"> 1 </mat-radio-button>
           <mat-radio-button value="2" class="opsi"> 2 </mat-radio-button>
           <mat-radio-button value="3" class="opsi"> 3 </mat-radio-button>
@@ -39,7 +39,7 @@
         </mat-radio-group>
         <mat-divider></mat-divider>
          <p class="textopsi"> 3.kemampuan mencapai target kerja sesuai standar rumah sakit</p>
-        <mat-radio-group aria-label="Select an option" color="primary">
+        <mat-radio-group aria-label="Select an option" color="primary" [(ngModel)]="aspek_teknis_3">
           <mat-radio-button value="1" class="opsi"> 1 </mat-radio-button>
           <mat-radio-button value="2" class="opsi"> 2 </mat-radio-button>
           <mat-radio-button value="3" class="opsi"> 3 </mat-radio-button>
@@ -48,7 +48,7 @@
         </mat-radio-group>
         <mat-divider></mat-divider>
          <p class="textopsi">4.Tidak melakukan kelalaian yang menyebabkan terjadinya IKP Inside Keselamatan Pasien (KTC,KNC,KPC,KTD,Sentinel)</p>
-        <mat-radio-group aria-label="Select an option" color="primary">
+        <mat-radio-group aria-label="Select an option" color="primary" [(ngModel)]="aspek_teknis_4">
           <mat-radio-button value="1" class="opsi"> 1 </mat-radio-button>
           <mat-radio-button value="2" class="opsi"> 2 </mat-radio-button>
           <mat-radio-button value="3" class="opsi"> 3 </mat-radio-button>
@@ -59,7 +59,7 @@
   
          <p class="textopsi">5.Pemahaman dan Implementasi tentang materi pembekalan/Orientasi pegawai</p>
          <p class="textopsi">a.Tupoksi</p>
-         <mat-radio-group aria-label="Select an option" color="primary">
+         <mat-radio-group aria-label="Select an option" color="primary" [(ngModel)]="aspek_teknis_5a">
           <mat-radio-button value="1" class="opsi"> 1 </mat-radio-button>
           <mat-radio-button value="2" class="opsi"> 2 </mat-radio-button>
           <mat-radio-button value="3" class="opsi"> 3 </mat-radio-button>
@@ -69,7 +69,7 @@
         <mat-divider></mat-divider>
   
          <p class="textopsi">b.PPI</p>
-         <mat-radio-group aria-label="Select an option" color="primary">
+         <mat-radio-group aria-label="Select an option" color="primary" [(ngModel)]="aspek_teknis_5b">
           <mat-radio-button value="1" class="opsi"> 1 </mat-radio-button>
           <mat-radio-button value="2" class="opsi"> 2 </mat-radio-button>
           <mat-radio-button value="3" class="opsi"> 3 </mat-radio-button>
@@ -79,7 +79,7 @@
         <mat-divider></mat-divider>
   
          <p class="textopsi">c.K3RS</p>
-         <mat-radio-group aria-label="Select an option" color="primary">
+         <mat-radio-group aria-label="Select an option" color="primary" [(ngModel)]="aspek_teknis_5c">
           <mat-radio-button value="1" class="opsi"> 1 </mat-radio-button>
           <mat-radio-button value="2" class="opsi"> 2 </mat-radio-button>
           <mat-radio-button value="3" class="opsi"> 3 </mat-radio-button>
@@ -89,7 +89,7 @@
         <mat-divider></mat-divider>
   
          <p class="textopsi">d.PMKP</p>
-         <mat-radio-group aria-label="Select an option" color="primary">
+         <mat-radio-group aria-label="Select an option" color="primary" [(ngModel)]="aspek_teknis_5d">
           <mat-radio-button value="1" class="opsi"> 1 </mat-radio-button>
           <mat-radio-button value="2" class="opsi"> 2 </mat-radio-button>
           <mat-radio-button value="3" class="opsi"> 3 </mat-radio-button>
@@ -99,7 +99,7 @@
         <mat-divider></mat-divider>
   
          <p class="textopsi">e.BHD</p>
-        <mat-radio-group aria-label="Select an option" color="primary">
+        <mat-radio-group aria-label="Select an option" color="primary" [(ngModel)]="aspek_teknis_5e">
           <mat-radio-button value="1" class="opsi"> 1 </mat-radio-button>
           <mat-radio-button value="2" class="opsi"> 2 </mat-radio-button>
           <mat-radio-button value="3" class="opsi"> 3 </mat-radio-button>
@@ -111,7 +111,7 @@
         <h3>II.ASPEK NON TEKNIS</h3>
   
         <p class="textopsi"> 1.Tertib Administrasi</p>
-        <mat-radio-group aria-label="Select an option" color="primary">
+        <mat-radio-group aria-label="Select an option" color="primary" [(ngModel)]="aspek_non_teknis_1">
           <mat-radio-button value="1" class="opsi"> 1 </mat-radio-button>
           <mat-radio-button value="2" class="opsi"> 2 </mat-radio-button>
           <mat-radio-button value="3" class="opsi"> 3 </mat-radio-button>
@@ -121,7 +121,7 @@
   
         <mat-divider></mat-divider>
          <p class="textopsi"> 2.Inisiatif : kesediaan memberikan ide-ide yang bermanfaat bagi peningkatan kerja dan pemecahan masalah dengan idenya sendiri</p>
-        <mat-radio-group aria-label="Select an option" color="primary">
+        <mat-radio-group aria-label="Select an option" color="primary" [(ngModel)]="aspek_non_teknis_2">
           <mat-radio-button value="1" class="opsi"> 1 </mat-radio-button>
           <mat-radio-button value="2" class="opsi"> 2 </mat-radio-button>
           <mat-radio-button value="3" class="opsi"> 3 </mat-radio-button>
@@ -130,7 +130,7 @@
         </mat-radio-group>
         <mat-divider></mat-divider>
          <p class="textopsi"> 3.Kerjasama dengan atasan,rekan kerja dan bawahan</p>
-        <mat-radio-group aria-label="Select an option" color="primary">
+        <mat-radio-group aria-label="Select an option" color="primary" [(ngModel)]="aspek_non_teknis_3">
           <mat-radio-button value="1" class="opsi"> 1 </mat-radio-button>
           <mat-radio-button value="2" class="opsi"> 2 </mat-radio-button>
           <mat-radio-button value="3" class="opsi"> 3 </mat-radio-button>
@@ -142,7 +142,7 @@
       <h3>III.ASPEK KEPRIBADIAN</h3>
   
         <p class="textopsi"> 1.Sikap : Berperilaku dan ber penampilan sopan</p>
-        <mat-radio-group aria-label="Select an option" color="primary">
+        <mat-radio-group aria-label="Select an option" color="primary" [(ngModel)]="aspek_kepribadian_1">
           <mat-radio-button value="1" class="opsi"> 1 </mat-radio-button>
           <mat-radio-button value="2" class="opsi"> 2 </mat-radio-button>
           <mat-radio-button value="3" class="opsi"> 3 </mat-radio-button>
@@ -152,7 +152,7 @@
   
         <mat-divider></mat-divider>
          <p class="textopsi"> 2.Kehadiran dan disiplin kerja : tingkat absensi , kehadiran tepat wawktu , serta disiplin dalam penggunaaan waktu</p>
-        <mat-radio-group aria-label="Select an option" color="primary">
+        <mat-radio-group aria-label="Select an option" color="primary" [(ngModel)]="aspek_kepribadian_2">
           <mat-radio-button value="1" class="opsi"> 1 </mat-radio-button>
           <mat-radio-button value="2" class="opsi"> 2 </mat-radio-button>
           <mat-radio-button value="3" class="opsi"> 3 </mat-radio-button>
@@ -161,7 +161,7 @@
         </mat-radio-group>
         <mat-divider></mat-divider>
          <p class="textopsi"> 3.Tanggung jawab dan loyalitas : Kesediaan melaksanakan kewajiban secara tuntas</p>
-        <mat-radio-group aria-label="Select an option" color="primary">
+        <mat-radio-group aria-label="Select an option" color="primary" [(ngModel)]="aspek_kepribadian_3">
           <mat-radio-button value="1" class="opsi"> 1 </mat-radio-button>
           <mat-radio-button value="2" class="opsi"> 2 </mat-radio-button>
           <mat-radio-button value="3" class="opsi"> 3 </mat-radio-button>
@@ -170,7 +170,7 @@
         </mat-radio-group>
         <mat-divider></mat-divider>
          <p class="textopsi"> 4.Ketaatan terhadap instruksi kerja atasan</p>
-        <mat-radio-group aria-label="Select an option" color="primary">
+        <mat-radio-group aria-label="Select an option" color="primary" [(ngModel)]="aspek_kepribadian_4">
           <mat-radio-button value="1" class="opsi"> 1 </mat-radio-button>
           <mat-radio-button value="2" class="opsi"> 2 </mat-radio-button>
           <mat-radio-button value="3" class="opsi"> 3 </mat-radio-button>
@@ -179,7 +179,7 @@
         </mat-radio-group>
         <mat-divider></mat-divider>
          <p class="textopsi"> 5.Komunikasi : kemampuan untuk berinteraksi dan mengungkapkan ide secara verbal maupun dalam pertemuan</p>
-        <mat-radio-group aria-label="Select an option" color="primary">
+        <mat-radio-group aria-label="Select an option" color="primary" [(ngModel)]="aspek_kepribadian_5">
           <mat-radio-button value="1" class="opsi"> 1 </mat-radio-button>
           <mat-radio-button value="2" class="opsi"> 2 </mat-radio-button>
           <mat-radio-button value="3" class="opsi"> 3 </mat-radio-button>
@@ -188,10 +188,10 @@
         </mat-radio-group>
         <mat-divider></mat-divider>
   
-        <h3>IV.ASPEK NON TEKNIS</h3>
+        <h3>IV.ASPEK KEPEMIMPINAN (DIISI KHUSUS BAGI PEMEGANG JABATAN)</h3>
   
         <p class="textopsi"> 1.Fungsi sebagai Komando : mampu memberikan usulan,koordinasi,perencanaan,pengawasan dan evaluasi anggota tim kerja</p>
-        <mat-radio-group aria-label="Select an option" color="primary">
+        <mat-radio-group aria-label="Select an option" color="primary" [(ngModel)]="aspek_kepemimpinan_1">
           <mat-radio-button value="1" class="opsi"> 1 </mat-radio-button>
           <mat-radio-button value="2" class="opsi"> 2 </mat-radio-button>
           <mat-radio-button value="3" class="opsi"> 3 </mat-radio-button>
@@ -201,7 +201,7 @@
   
         <mat-divider></mat-divider>
          <p class="textopsi"> 2.Fungsi sebagai Guru : mampu memberikan keteladananan , mendidik , meredam masalah dan bisa memberikan bimbingan</p>
-        <mat-radio-group aria-label="Select an option" color="primary">
+        <mat-radio-group aria-label="Select an option" color="primary" [(ngModel)]="aspek_kepemimpinan_2">
           <mat-radio-button value="1" class="opsi"> 1 </mat-radio-button>
           <mat-radio-button value="2" class="opsi"> 2 </mat-radio-button>
           <mat-radio-button value="3" class="opsi"> 3 </mat-radio-button>
@@ -210,7 +210,7 @@
         </mat-radio-group>
         <mat-divider></mat-divider>
          <p class="textopsi"> 3.Fungsi sebagai Ibu : menciptakan keharmonisan ,kekeluargaan,menerima keluhan,mengayomi dan motivasi</p>
-        <mat-radio-group aria-label="Select an option" color="primary">
+        <mat-radio-group aria-label="Select an option" color="primary" [(ngModel)]="aspek_kepemimpinan_3">
           <mat-radio-button value="1" class="opsi"> 1 </mat-radio-button>
           <mat-radio-button value="2" class="opsi"> 2 </mat-radio-button>
           <mat-radio-button value="3" class="opsi"> 3 </mat-radio-button>
@@ -221,7 +221,7 @@
       </mat-list>
        <br>
        <div class="example-button-row">
-          <button mat-raised-button (click)="update_data(unit_kerja.value,nama.value,nip.value,jabatan.value)" color="primary" class="ButtonAction">Submit</button>
+          <button mat-raised-button (click)="update_data(unit_kerja.value,nama.value,nip.value,jabatan.value,aspek_teknis_1,aspek_teknis_2,aspek_teknis_3,aspek_teknis_4,aspek_teknis_5a,aspek_teknis_5b,aspek_teknis_5c,aspek_teknis_5d,aspek_teknis_5e,aspek_non_teknis_1,aspek_non_teknis_2,aspek_non_teknis_3,aspek_kepribadian_1,aspek_kepribadian_2,aspek_kepribadian_3,aspek_kepribadian_4,aspek_kepribadian_5,aspek_kepemimpinan_1,aspek_kepemimpinan_2,aspek_kepemimpinan_3)" color="primary" class="ButtonAction">Submit</button>
         </div>
   
       
