@@ -29,6 +29,8 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
+import { PreviewComponent } from './preview/preview.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,9 +40,10 @@ import { environment } from '../environments/environment';
     BodyTableComponent,
     FormEditComponent,
     FormAddComponent,
-    DeletePopUpComponent
+    DeletePopUpComponent,
+    PreviewComponent
   ],
-  entryComponents : [FormEditComponent,FormAddComponent,DeletePopUpComponent],
+  entryComponents : [FormEditComponent,FormAddComponent,DeletePopUpComponent,PreviewComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -63,6 +66,7 @@ import { environment } from '../environments/environment';
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireAuthModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

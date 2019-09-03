@@ -1,6 +1,11 @@
 <button mat-raised-button (click)="Add()" color="primary" class="ButtonActionAdd"><mat-icon aria-hidden="false" aria-label="Example add icon">add</mat-icon>New Data</button> 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
+  <ng-container matColumnDef="unit_kerja">
+    <th mat-header-cell *matHeaderCellDef> Unit Kerja </th>
+    <td mat-cell *matCellDef="let element"> {{element.unit_kerja}} </td>
+  </ng-container>
+  
   <ng-container matColumnDef="nama">
     <th mat-header-cell *matHeaderCellDef> Nama </th>
     <td mat-cell *matCellDef="let element"> {{element.nama}} </td>
@@ -19,9 +24,9 @@
   <ng-container matColumnDef="ket">
     <th mat-header-cell *matHeaderCellDef> Action </th>
     <td mat-cell *matCellDef="let element"> 
-    	<button mat-raised-button (click)="Edit()" color="primary" class="ButtonAction">Edit</button> 
+    	<button mat-raised-button (click)="Edit(element)" color="primary" class="ButtonAction">Edit</button> 
     	<button mat-raised-button (click)="Delete(element.id)" color="primary" class="ButtonAction">Delete</button> 
-    	<button mat-raised-button (click)="Preview()" color="primary" class="ButtonAction">Preview</button> 
+    	<button mat-raised-button (click)="Preview(element)" color="primary" class="ButtonAction">Preview</button> 
     	<button mat-raised-button (click)="Export()" color="primary" class="ButtonAction">Export</button> 
     </td>
   </ng-container>

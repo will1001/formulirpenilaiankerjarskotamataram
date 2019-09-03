@@ -1,0 +1,226 @@
+<div class="example-container">
+    <h1>Formulir Penilaian Kinerja </h1>
+
+    <p>Unit Kerja : {{dataSource.unit_kerja}}</p>
+    <p>Nama       : {{dataSource.nama}}</p>
+    <p>NIP        : {{dataSource.nip}}</p>
+    <p>Jabatan    : {{dataSource.jabatan}}</p>
+
+
+    <table style="width:100%">
+            <tr>
+              <th rowspan="2">NO</th>
+              <th rowspan="2">ASPEK PENILAIAN</th> 
+              <th colspan="5">SKOR PENILAIAN</th>
+            </tr>
+            <tr>
+              <th>1</th>
+              <th>2</th>
+              <th>3</th>
+              <th>4</th>
+              <th>5</th>
+            </tr>
+            <tr>
+              <th colspan="7" class="KATEGORI">I.ASPEK TEKNIS PEKERJAAN</th>
+            </tr>
+            <tr>
+              <td>1.</td>
+              <td>Kualitas kerja,kemampuan,efektifitas,ketelitian,keterampilan dan kebersihan dalam menyelesaikan tugas sesuai protap</td> 
+              <td>{{dataSource.aspek_teknis_1  == "1" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_1  == "2" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_1  == "3" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_1  == "4" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_1  == "5" ? "&#10004;" : ""}}</td>
+            </tr>
+            <tr>
+              <td>2.</td>
+              <td>Kuantitas kerja,seberapa tepat dan cepat menyelesaikan tugas</td> 
+              <td>{{dataSource.aspek_teknis_2  == "1" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_2  == "2" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_2  == "3" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_2  == "4" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_2  == "5" ? "&#10004;" : ""}}</td>
+            </tr>
+            <tr>
+              <td>3.</td>
+              <td>kemampuan mencapai target kerja sesuai standar rumah sakit</td> 
+              <td>{{dataSource.aspek_teknis_3  == "1" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_3  == "2" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_3  == "3" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_3  == "4" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_3  == "5" ? "&#10004;" : ""}}</td>
+            </tr>
+            <tr>
+              <td>4.</td>
+              <td>Tidak melakukan kelalaian yang menyebabkan terjadinya IKP Inside Keselamatan Pasien (KTC,KNC,KPC,KTD,Sentinel)</td> 
+              <td>{{dataSource.aspek_teknis_4  == "1" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_4  == "2" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_4  == "3" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_4  == "4" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_4  == "5" ? "&#10004;" : ""}}</td>
+            </tr>
+            <tr>
+              <td>5.</td>
+              <td>Pemahaman dan Implementasi tentang materi pembekalan/Orientasi pegawai</td> 
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>a.Tupoksi</td> 
+              <td>{{dataSource.aspek_teknis_5a  == "1" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_5a  == "2" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_5a  == "3" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_5a  == "4" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_5a  == "5" ? "&#10004;" : ""}}</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>b.PPI</td> 
+              <td>{{dataSource.aspek_teknis_5b  == "1" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_5b  == "2" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_5b  == "3" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_5b  == "4" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_5b  == "5" ? "&#10004;" : ""}}</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>c.K3RS</td> 
+              <td>{{dataSource.aspek_teknis_5c  == "1" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_5c  == "2" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_5c  == "3" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_5c  == "4" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_5c  == "5" ? "&#10004;" : ""}}</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>d.PMKP</td> 
+              <td>{{dataSource.aspek_teknis_5d  == "1" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_5d  == "2" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_5d  == "3" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_5d  == "4" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_5d  == "5" ? "&#10004;" : ""}}</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>e.BHD</td> 
+              <td>{{dataSource.aspek_teknis_5e  == "1" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_5e  == "2" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_5e  == "3" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_5e  == "4" ? "&#10004;" : ""}}</td>
+              <td>{{dataSource.aspek_teknis_5e  == "5" ? "&#10004;" : ""}}</td>
+            </tr>
+            <tr>
+                <th colspan="7" class="KATEGORI">II.ASPEK NON TEKNIS</th>
+              </tr>
+              <tr>
+                <td>1.</td>
+                <td>Kualitas kerja,kemampuan,efektifitas,ketelitian,keterampilan dan kebersihan dalam menyelesaikan tugas sesuai protap</td> 
+                <td>{{dataSource.aspek_non_teknis_1  == "1" ? "&#10004;" : ""}}</td>
+                <td>{{dataSource.aspek_non_teknis_1  == "2" ? "&#10004;" : ""}}</td>
+                <td>{{dataSource.aspek_non_teknis_1  == "3" ? "&#10004;" : ""}}</td>
+                <td>{{dataSource.aspek_non_teknis_1  == "4" ? "&#10004;" : ""}}</td>
+                <td>{{dataSource.aspek_non_teknis_1  == "5" ? "&#10004;" : ""}}</td>
+              </tr>
+              <tr>
+                <td>2.</td>
+                <td>Kuantitas kerja,seberapa tepat dan cepat menyelesaikan tugas</td> 
+                <td>{{dataSource.aspek_non_teknis_2  == "1" ? "&#10004;" : ""}}</td>
+                <td>{{dataSource.aspek_non_teknis_2  == "2" ? "&#10004;" : ""}}</td>
+                <td>{{dataSource.aspek_non_teknis_2  == "3" ? "&#10004;" : ""}}</td>
+                <td>{{dataSource.aspek_non_teknis_2  == "4" ? "&#10004;" : ""}}</td>
+                <td>{{dataSource.aspek_non_teknis_2  == "5" ? "&#10004;" : ""}}</td>
+              </tr>
+              <tr>
+                <td>3.</td>
+                <td>kemampuan mencapai target kerja sesuai standar rumah sakit</td> 
+                <td>{{dataSource.aspek_non_teknis_3  == "1" ? "&#10004;" : ""}}</td>
+                <td>{{dataSource.aspek_non_teknis_3  == "2" ? "&#10004;" : ""}}</td>
+                <td>{{dataSource.aspek_non_teknis_3  == "3" ? "&#10004;" : ""}}</td>
+                <td>{{dataSource.aspek_non_teknis_3  == "4" ? "&#10004;" : ""}}</td>
+                <td>{{dataSource.aspek_non_teknis_3  == "5" ? "&#10004;" : ""}}</td>
+              </tr>
+                    <tr>
+                      <th colspan="7" class="KATEGORI">III.ASPEK KEPRIBADIAN</th>
+                    </tr>
+                    <tr>
+                      <td>1.</td>
+                      <td>Kualitas kerja,kemampuan,efektifitas,ketelitian,keterampilan dan kebersihan dalam menyelesaikan tugas sesuai protap</td> 
+                      <td>{{dataSource.aspek_kepribadian_1  == "1" ? "&#10004;" : ""}}</td>
+                      <td>{{dataSource.aspek_kepribadian_1  == "2" ? "&#10004;" : ""}}</td>
+                      <td>{{dataSource.aspek_kepribadian_1  == "3" ? "&#10004;" : ""}}</td>
+                      <td>{{dataSource.aspek_kepribadian_1  == "4" ? "&#10004;" : ""}}</td>
+                      <td>{{dataSource.aspek_kepribadian_1  == "5" ? "&#10004;" : ""}}</td>
+                    </tr>
+                    <tr>
+                      <td>2.</td>
+                      <td>Kuantitas kerja,seberapa tepat dan cepat menyelesaikan tugas</td> 
+                      <td>{{dataSource.aspek_kepribadian_2  == "1" ? "&#10004;" : ""}}</td>
+                      <td>{{dataSource.aspek_kepribadian_2  == "2" ? "&#10004;" : ""}}</td>
+                      <td>{{dataSource.aspek_kepribadian_2  == "3" ? "&#10004;" : ""}}</td>
+                      <td>{{dataSource.aspek_kepribadian_2  == "4" ? "&#10004;" : ""}}</td>
+                      <td>{{dataSource.aspek_kepribadian_2  == "5" ? "&#10004;" : ""}}</td>
+                    </tr>
+                    <tr>
+                      <td>3.</td>
+                      <td>kemampuan mencapai target kerja sesuai standar rumah sakit</td> 
+                      <td>{{dataSource.aspek_kepribadian_3  == "1" ? "&#10004;" : ""}}</td>
+                      <td>{{dataSource.aspek_kepribadian_3  == "2" ? "&#10004;" : ""}}</td>
+                      <td>{{dataSource.aspek_kepribadian_3  == "3" ? "&#10004;" : ""}}</td>
+                      <td>{{dataSource.aspek_kepribadian_3  == "4" ? "&#10004;" : ""}}</td>
+                      <td>{{dataSource.aspek_kepribadian_3  == "5" ? "&#10004;" : ""}}</td>
+                    </tr>
+                    <tr>
+                      <td>4.</td>
+                      <td>Tidak melakukan kelalaian yang menyebabkan terjadinya IKP Inside Keselamatan Pasien (KTC,KNC,KPC,KTD,Sentinel)</td> 
+                      <td>{{dataSource.aspek_kepribadian_4  == "1" ? "&#10004;" : ""}}</td>
+                      <td>{{dataSource.aspek_kepribadian_4  == "2" ? "&#10004;" : ""}}</td>
+                      <td>{{dataSource.aspek_kepribadian_4  == "3" ? "&#10004;" : ""}}</td>
+                      <td>{{dataSource.aspek_kepribadian_4  == "4" ? "&#10004;" : ""}}</td>
+                      <td>{{dataSource.aspek_kepribadian_4  == "5" ? "&#10004;" : ""}}</td>
+                    </tr>
+                    <tr>
+                      <td>5.</td>
+                      <td>Tidak melakukan kelalaian yang menyebabkan terjadinya IKP Inside Keselamatan Pasien (KTC,KNC,KPC,KTD,Sentinel)</td> 
+                      <td>{{dataSource.aspek_kepribadian_5  == "1" ? "&#10004;" : ""}}</td>
+                      <td>{{dataSource.aspek_kepribadian_5  == "2" ? "&#10004;" : ""}}</td>
+                      <td>{{dataSource.aspek_kepribadian_5  == "3" ? "&#10004;" : ""}}</td>
+                      <td>{{dataSource.aspek_kepribadian_5  == "4" ? "&#10004;" : ""}}</td>
+                      <td>{{dataSource.aspek_kepribadian_5  == "5" ? "&#10004;" : ""}}</td>
+                    </tr>
+                        <tr>
+                            <th colspan="7" class="KATEGORI">IV.ASPEK KEPEMIMPINAN (DIISI KHUSUS BAGI PEMEGANG JABATAN)</th>
+                          </tr>
+                          <tr>
+                            <td>1.</td>
+                            <td>Kualitas kerja,kemampuan,efektifitas,ketelitian,keterampilan dan kebersihan dalam menyelesaikan tugas sesuai protap</td> 
+                            <td>{{dataSource.aspek_kepemimpinan_1  == "1" ? "&#10004;" : ""}}</td>
+                            <td>{{dataSource.aspek_kepemimpinan_1  == "2" ? "&#10004;" : ""}}</td>
+                            <td>{{dataSource.aspek_kepemimpinan_1  == "3" ? "&#10004;" : ""}}</td>
+                            <td>{{dataSource.aspek_kepemimpinan_1  == "4" ? "&#10004;" : ""}}</td>
+                            <td>{{dataSource.aspek_kepemimpinan_1  == "5" ? "&#10004;" : ""}}</td>
+                          </tr>
+                          <tr>
+                            <td>2.</td>
+                            <td>Kuantitas kerja,seberapa tepat dan cepat menyelesaikan tugas</td> 
+                            <td>{{dataSource.aspek_kepemimpinan_2  == "1" ? "&#10004;" : ""}}</td>
+                            <td>{{dataSource.aspek_kepemimpinan_2  == "2" ? "&#10004;" : ""}}</td>
+                            <td>{{dataSource.aspek_kepemimpinan_2  == "3" ? "&#10004;" : ""}}</td>
+                            <td>{{dataSource.aspek_kepemimpinan_2  == "4" ? "&#10004;" : ""}}</td>
+                            <td>{{dataSource.aspek_kepemimpinan_2  == "5" ? "&#10004;" : ""}}</td>
+                          </tr>
+                          <tr>
+                            <td>3.</td>
+                            <td>kemampuan mencapai target kerja sesuai standar rumah sakit</td> 
+                            <td>{{dataSource.aspek_kepemimpinan_3  == "1" ? "&#10004;" : ""}}</td>
+                            <td>{{dataSource.aspek_kepemimpinan_3  == "2" ? "&#10004;" : ""}}</td>
+                            <td>{{dataSource.aspek_kepemimpinan_3  == "3" ? "&#10004;" : ""}}</td>
+                            <td>{{dataSource.aspek_kepemimpinan_3  == "4" ? "&#10004;" : ""}}</td>
+                            <td>{{dataSource.aspek_kepemimpinan_3  == "5" ? "&#10004;" : ""}}</td>
+                          </tr>
+                          
+          </table>
+</div>

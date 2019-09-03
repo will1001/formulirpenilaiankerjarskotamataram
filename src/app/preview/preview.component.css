@@ -1,0 +1,17 @@
+table, th, td {
+    border: 1px solid black;
+    margin: 1px 1px;
+    text-align: left;
+  }
+
+  .KATEGORI{
+      text-align: left;
+  }
+
+  .example-container {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    height: 500px;
+    width: auto;
+  }

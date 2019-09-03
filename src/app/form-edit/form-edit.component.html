@@ -1,18 +1,18 @@
 <div class="example-container">
     <mat-form-field>
-      <input matInput placeholder="Unit Kerja">
+      <input matInput placeholder="Unit Kerja" value="{{datasource.unit_kerja}}" #unit_kerja>
     </mat-form-field>
   
     <mat-form-field>
-      <textarea matInput placeholder="Nama"></textarea>
+      <textarea matInput placeholder="Nama" value="{{datasource.nama}}" #nama></textarea>
     </mat-form-field>
   
     <mat-form-field>
-      <textarea matInput placeholder="NIP"></textarea>
+      <textarea matInput placeholder="NIP" value="{{datasource.nip}}" #nip></textarea>
     </mat-form-field>
   
     <mat-form-field>
-      <textarea matInput placeholder="Jabatan"></textarea>
+      <textarea matInput placeholder="Jabatan" value="{{datasource.jabatan}}" #jabatan></textarea>
     </mat-form-field>
   
   
@@ -219,7 +219,10 @@
         </mat-radio-group>
         <mat-divider></mat-divider>
       </mat-list>
+       <br>
+       <div class="example-button-row">
+          <button mat-raised-button (click)="update_data(unit_kerja.value,nama.value,nip.value,jabatan.value)" color="primary" class="ButtonAction">Submit</button>
+        </div>
   
-      
       
   </div>
